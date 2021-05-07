@@ -56,3 +56,5 @@ To test properly, please follow these steps:
 - init-payment.cshtml and init-payment.cshtml.cs: Checkout page that kicks off the payment process
 - payment-response.cshtml and payment-response.cshtml.cs: The response page/webhook that is used by Knet. Knet performs a POST request against this page once the process is finished from their side. The result can be successful (CAPTURED) or failed (anything else).
 - payment-error.cshtml: The error page that is used by Knet. Knet performs a GET request against this page if there are any errors related to the payment gateway or the payment process.
+- knetUtil.cs: Utility Knet class that contains the bulk of the encryption/decryption logic.
+- phpExample.php: A summary of the official Knet PHP example. Use this file to compare .NET Core outputs with PHP outputs.
