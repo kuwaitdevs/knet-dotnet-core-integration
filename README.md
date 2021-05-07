@@ -49,3 +49,10 @@ To test properly, please follow these steps:
   - Database Integration
   - Logging
   - Additional Security
+
+## Pages of Interest
+
+- Index.cshtml: Landing page
+- init-payment.cshtml and init-payment.cshtml.cs: Checkout page that kicks off the payment process
+- payment-response.cshtml and payment-response.cshtml.cs: The response page/webhook that is used by Knet. Knet performs a POST request against this page once the process is finished from their side. The result can be successful (CAPTURED) or failed (anything else).
+- payment-error.cshtml: The error page that is used by Knet. Knet performs a GET request against this page if there are any errors related to the payment gateway or the payment process.
