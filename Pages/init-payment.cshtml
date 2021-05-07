@@ -1,0 +1,18 @@
+﻿@page "/checkout"
+@model knet_dotnet_core_integration.init_payment
+@{
+    ViewData["Title"] = "Checkout";
+}
+<a href="/">Home</a> |
+<a href="/checkout">Checkout</a>
+<hr />
+<h1>Checkout</h1>
+<form method="post">
+    <span>Please select a package to purchase:</span><br />
+    <select name="items">
+        <option selected value="">None</option>
+        <option value="a,b,c">Package 1 (A,B,C) - Total 7 KWD</option>
+        <option value="a,c">Package 2 (A,C) - Total 5 KWD</option>
+    </select>
+    <button>Pay with KNET &copy;</button>
+</form>

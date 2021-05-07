@@ -1,0 +1,34 @@
+﻿@page "/payment-response"
+@model knet_dotnet_core_integration.payment_response
+@{
+    var isPaymentSuccessful = Model.Result.ToLowerInvariant() == "captured";
+    var title = isPaymentSuccessful ? "Payment Successful" : "Payment Failed";
+    ViewData["Title"] = title;
+}
+<a href="/">Home</a> |
+<a href="/checkout">Checkout</a>
+<hr />
+<h1>@title</h1>
+@if (isPaymentSuccessful)
+{
+    <h1>Purchase complete, thank you.</h1>
+    <h2>Receipt</h2>
+    <b>Payment ID: @Model.PaymnetId</b> <br />
+    <b>Track ID: @Model.TrackID</b>
+    <h3>Payment Details</h3>
+}
+
+@if (!isPaymentSuccessful)
+{
+    <h1>Purchase failed, please try again.</h1>
+    <h3>Error Details</h3>
+}
+<table>
+    @foreach (var item in Model.KnetParamsList)
+    {
+        <tr>
+            <td>@item.Key</td>
+            <td>@item.Value</td>
+        </tr>
+    }
+</table>

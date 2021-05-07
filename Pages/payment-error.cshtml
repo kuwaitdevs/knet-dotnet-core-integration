@@ -1,0 +1,28 @@
+﻿@page "/payment-error"
+@{
+    ViewData["Title"] = "Payment Gateway Error";
+    var paymentId = Request.Query["PaymentID"];
+    var errorText = Request.Query["ErrorText"];
+    var trackId = Request.Query["trackid"];
+}
+<a href="/">Home</a> |
+<a href="/checkout">Checkout</a>
+<hr />
+<h1>Payment Failed</h1>
+<b>Please try again.</b></br>
+<b>If the problem persists, please contact support.</b>
+<h2>Error Details</h2>
+<table>
+    <tr>
+        <td>Payment ID</td>
+        <td>@paymentId</td>
+    </tr>
+    <tr>
+        <td>Error</td>
+        <td>@errorText</td>
+    </tr>
+    <tr>
+        <td>Track ID</td>
+        <td>@trackId</td>
+    </tr>
+</table>
