@@ -5,7 +5,7 @@ This is an unofficial port of the official PHP example provided by Knet.
 
 ## Why use RAW integration instead of iPayPipe (DLL)?
 
-- iPayPipe requires [IKVM](https://www.ikvm.net/#Introduction) to work which is not ideal, especially that the IKVM project is not in active development.
+- iPayPipe requires [IKVM](https://www.ikvm.net/#Introduction) to work in C# based code which is not ideal, especially that the IKVM project is not in active development.
 - The IKVM version provided by Knet is not compatible with .NET Core.
 - This approach reduces dependencies and produces a lighter application footprint.
 - The published app is compatible with all platforms.
